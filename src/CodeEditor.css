@@ -2,6 +2,8 @@
 body{
   background-color: #1e1e1e;
   color: #f5f5f5;
+  width:100vw;
+  overflow-x: hidden;
 }
 nav{
   background-color: #1e1e1e;
@@ -18,15 +20,16 @@ nav h2{
 
 .canvas{
   display: flex;
-  width: 100vw;
+  width: 95vw;
+  padding: 0 2.5vw;
 }
 
 .question-container{
-  width: 35vw;
-  margin: 1rem;
-  height: 70vh;
+  width: 45vw;
+  margin: 0 1rem 0 0;
+  height: 75vh;
   padding: 0 1vw;
-  overflow: scroll;
+  overflow-y: scroll;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -38,25 +41,22 @@ nav h2{
 }
 
 .editor-container {
-  margin: 1rem 1rem 1rem 0;
   border: 1px solid #ccc;
   border-radius: 5px;
-  width:70vw;
-  height:70vh;
+  width:55vw;
+  height:50vh;
 }
 
 .editor-sidebar {
   display: flex;
   padding: 10px;
-  background-color: #1e1e1e;
-  border-bottom: 1px solid #ccc;
+  background-color: #333333;
 }
 
 .editor-sidebar select {
-  margin-bottom: 10px;
   background-color: #1e1e1e;
   color: #f5f5f5;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 5px;
   width: 20rem;
   padding:0.5rem;
@@ -71,22 +71,32 @@ nav h2{
   background-color: #1e1e1e;
   color: #fff;
   border: none;
-  border: 1px solid #ccc;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .editor-content {
+  display: flex;
+  justify-content: center;
   padding:1rem;
-  height: 55vh;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .output-container {
-  margin: 20px;
+  margin-top: 1rem;
+  width:55vw;
   border: 1px solid #ccc;
   border-radius: 5px;
   overflow: hidden;
+  height: 22vh;
+  text-align: left;
+}
+.output-heading{
+  padding: 0.5rem;
+  background-color: #333333;
+}
+.output-heading h4{
+  margin: 0%;
 }
 
 .command-prompt {
@@ -103,6 +113,6 @@ nav h2{
 /* Add additional styling as needed */
 
 /* Example: Centering text */
-.output-container, .command-prompt, .compilation-info {
+.command-prompt, .compilation-info {
   text-align: center;
 }

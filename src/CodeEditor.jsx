@@ -77,7 +77,7 @@ const CodeEditor = () => {
   return (
     <div>
       <nav>
-        <h2>Code Editor</h2>
+        <h2>LeedCode</h2>&nbsp;( Pun Intended )
       </nav>
       <div className="canvas">
         <div className="question-container">
@@ -113,6 +113,7 @@ const CodeEditor = () => {
             below:
           </p>
         </div>
+        <div>
         <div className="editor-container">
           <div className="editor-sidebar">
             <select
@@ -134,6 +135,8 @@ const CodeEditor = () => {
               theme="vs-dark"
               value={code}
               options={editorOptions}
+              height= "35vh"
+              automaticLayout={true}
               onChange={(newCode) => {
                 setCode(newCode);
                 setCompilationMessage("");
@@ -143,12 +146,16 @@ const CodeEditor = () => {
             />
           </div>
         </div>
-      </div>
-      <div className="output-container">
+        <div className="output-container">
+        <div className="output-heading">
+          <h4>Output</h4>
+        </div>
         <div className="command-prompt">
           {compilationMessage && <pre>{compilationMessage}</pre>}
           {error && <pre>{error}</pre>}
           {!error && <pre>{output}</pre>}
+        </div>
+      </div>
         </div>
       </div>
     </div>
